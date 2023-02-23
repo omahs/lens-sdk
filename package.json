@@ -63,7 +63,8 @@
       "packages/wagmi",
       "packages/blockchain-bindings",
       "packages/storage",
-      "packages/client"
+      "packages/client",
+      "packages/gated-content"
     ]
   }
 }

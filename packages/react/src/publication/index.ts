@@ -30,6 +30,7 @@ export * from './useWhoCollectedPublication';
 export * from './useWhoMirroredPublication';
 export * from './useProfilePublicationsForSale';
 export * from './filters';
+export * from './useEncryptGatedPublication';
 
 export {
   CollectState,

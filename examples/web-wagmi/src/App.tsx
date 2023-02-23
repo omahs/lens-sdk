@@ -41,6 +41,7 @@ import { UseUpdateDispatcherConfig } from './profiles/UseUpdateDispatcherConfig'
 import { UseUpdateFollowPolicy } from './profiles/UseUpdateFollowPolicy';
 import { UseUpdateProfileDetails } from './profiles/UseUpdateProfileDetails';
 import { UseUpdateProfileImage } from './profiles/UseUpdateProfileImage';
+import { Gated } from './publications/Gated';
 import { PublicationsPage } from './publications/PublicationsPage';
 import { UseCollect } from './publications/UseCollect';
 import { UseCollectedPublications } from './publications/UseCollectedPublications';
@@ -181,6 +182,8 @@ export function App() {
                 />
                 <Route path="/misc/useApproveModule" element={<UseApproveModule />} />
                 <Route path="/misc/useRecentTransactions" element={<UseRecentTransactions />} />
+
+                <Route path="/misc/gated" element={<Gated />} />
               </Routes>
             </GenericErrorBoundary>
             <Toaster />
