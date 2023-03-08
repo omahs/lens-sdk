@@ -17,11 +17,14 @@ const allFeedEventTypes = [
 export function Feed() {
   const [restrictEventTypesTo, setRestrictEventTypesTo] = useState<FeedEventItemType[]>([
     FeedEventItemType.Post,
+    FeedEventItemType.Comment,
   ]);
   const { data, error, loading, hasMore, observeRef } = useInfiniteScroll(
     useFeed({
-      profileId: '0x3a2a',
+      profileId: '0x77',
       restrictEventTypesTo,
+      // changing limit to 50 fixes the issue
+      limit: 10,
     }),
   );
 
