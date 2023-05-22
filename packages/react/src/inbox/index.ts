@@ -6,6 +6,7 @@ export type { InboxConfig } from './config';
 export type {
   FetchConversationsRequest,
   EnableConversationsRequest,
+  FetchMessagesRequest,
   IConversationProvider,
 } from './adapters/IConversationProvider';
 export type {

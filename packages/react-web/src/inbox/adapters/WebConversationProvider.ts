@@ -10,10 +10,14 @@ import {
   profileId as createProfileId,
   WalletEntity,
   EnvironmentConfig,
+  ConversationId,
+  Message,
+  Markdown,
+  FetchMessagesRequest,
 } from '@lens-protocol/react';
-import { failure, success } from '@lens-protocol/shared-kernel';
+import { failure, invariant, success } from '@lens-protocol/shared-kernel';
 import { IStorage } from '@lens-protocol/storage';
-import { Client, Conversation as XmtpConversation } from '@xmtp/xmtp-js';
+import { Client, DecodedMessage, Conversation as XmtpConversation } from '@xmtp/xmtp-js';
 
 import { extractPeerProfileId } from '../helpers';
 import { SignerAdapter } from './SignerAdapter';
@@ -108,6 +112,29 @@ export class WebConversationProvider implements IConversationProvider {
     }
   }
 
+  async fetchMessages(request: FetchMessagesRequest): Promise<Message[]> {
+    const xmtpConversations = await this.getXmtpConversations([request.conversationId]);
+    const xmtpConversation = xmtpConversations[0];
+
+    invariant(xmtpConversation, 'Conversation not found');
+
+    const messages = await xmtpConversation.messages();
+
+    return messages.map((decodedMessage: DecodedMessage) => {
+      return {
+        id: decodedMessage.id,
+        conversationId: xmtpConversation.topic,
+        content: decodedMessage.content as Markdown,
+        reactions: [],
+        sentAt: decodedMessage.sent,
+        sender: {
+          profileId: undefined, // TODO: extract sender profileId
+          address: decodedMessage.senderAddress,
+        },
+      };
+    });
+  }
+
   private buildConversation(
     xmtpConversation: XmtpConversation,
     activeParticipant: Participant,
@@ -141,5 +168,16 @@ export class WebConversationProvider implements IConversationProvider {
       return true;
     }
     return false;
+  }
+
+  private async getXmtpConversations(
+    conversationIds: ConversationId[],
+  ): Promise<XmtpConversation[]> {
+    const client = await this.getClient();
+    const allXmtpConversations = await client.conversations.list();
+
+    return allXmtpConversations.filter((xmtpConversation) => {
+      return conversationIds.some((id) => id === xmtpConversation.topic);
+    });
   }
 }
