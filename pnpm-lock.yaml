@@ -269,8 +269,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
@@ -339,8 +339,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       eslint:
         specifier: ^8.34.0
         version: 8.34.0
@@ -424,8 +424,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
@@ -482,8 +482,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/jest-when':
         specifier: ^3.5.2
         version: 3.5.2
@@ -622,8 +622,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/jest-when':
         specifier: ^3.5.2
         version: 3.5.2
@@ -755,8 +755,8 @@ importers:
         specifier: ^13.4.0
         version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/jest-when':
         specifier: ^3.5.2
         version: 3.5.2
@@ -861,8 +861,8 @@ importers:
         specifier: ^13.4.0
         version: 13.4.0(react-dom@18.2.0)(react@18.2.0)
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/jest-when':
         specifier: ^3.5.2
         version: 3.5.2
@@ -991,8 +991,8 @@ importers:
         specifier: ^11.0.0
         version: 11.0.0(rollup@3.17.2)(typescript@4.9.5)
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
@@ -1082,8 +1082,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/lodash':
         specifier: ^4.14.191
         version: 4.14.191
@@ -1140,8 +1140,8 @@ importers:
         specifier: workspace:*
         version: link:../tsconfig
       '@types/jest':
-        specifier: 29.2.3
-        version: 29.2.3
+        specifier: 29.5.2
+        version: 29.5.2
       '@types/node':
         specifier: ^18.15.11
         version: 18.15.11
@@ -5892,11 +5892,11 @@ packages:
   /@types/jest-when@3.5.2:
     resolution: {integrity: sha512-1WP+wJDW7h4TYAVLoIebxRIVv8GPk66Qsq2nU7PkwKZ6usurnDQZgk0DfBNKAJ9gVzapCXSV53Vn/3nBHBNzAw==}
     dependencies:
-      '@types/jest': 29.2.3
+      '@types/jest': 29.5.2
     dev: true
 
-  /@types/jest@29.2.3:
-    resolution: {integrity: sha512-6XwoEbmatfyoCjWRX7z0fKMmgYKe9+/HrviJ5k0X/tjJWHGAezZOfYaxqQKuzG/TvQyr+ktjm4jgbk0s4/oF2w==}
+  /@types/jest@29.5.2:
+    resolution: {integrity: sha512-mSoZVJF5YzGVCk+FsDxzDuH7s+SCkzrgKZzf0Z0T2WudhBUPoF6ktoTPC4R0ZoCPCV5xUvuU6ias5NvxcBcMMg==}
     dependencies:
       expect: 29.4.3
       pretty-format: 29.4.3
