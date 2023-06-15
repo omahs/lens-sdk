@@ -30,7 +30,7 @@ Did you mean to import @apollo/client/link/context/context.cjs?
 
 The root cause is the lack of ESM support from Apollo Client which manifests itself when imported as sub-dependency of `@lens-protocol/api-bindings` (which in turn is imported by `@lens-protocol/react`). See open Apollo Client [issue](https://github.com/apollographql/apollo-feature-requests/issues/287).
 
-To fix it you need to edit you `next.config.js` so to make sure the Lens SDK and its sub-dependencies a transpiled by Next.js build pipeline.
+To fix it you need to edit your `next.config.js` so to make sure the Lens SDK and its sub-dependencies a transpiled by Next.js build pipeline.
 
 ```js
 const nextConfig = {
